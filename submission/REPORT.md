@@ -3,8 +3,8 @@
 Phần phân tích tối đa một trang, không tính output ở phần 5.
 Định dạng tham chiếu và phạm vi tính trang: [SUBMISSION.md](../docs/SUBMISSION.md).
 
-**Họ tên / MSSV:**
-**Repo:**
+**Họ tên / MSSV:** Nguyễn Mai Hoàng Thiện - 2A202602912
+**Repo:** 
 **Commit bài nộp:**
 **AI đã dùng và phạm vi hỗ trợ (hoặc không dùng):**
 **Nguồn tham khảo khác (nếu có):**
@@ -16,14 +16,14 @@ checksum nào lệch) — không phải cách sửa.
 
 | | Lỗi Silver | Lỗi late data | Lỗi xoá (CDC) |
 |---|---|---|---|
-| **Triệu chứng** | | | |
+| **Triệu chứng** | `test_silver_tickets_one_row_per_ticket` fail (assert 24 == 12) (T-91 cập nhật nhiều lần) | `test_late_events_land_in_their_event_day` fail (thấy 2,1,0 != 5,3,1) (sự kiện u05 đến muộn) | `test_cdc_delete_becomes_tombstone` fail (T-97 bị xoá) |
 | **Nguyên nhân gốc** | | | |
 | **Cách sửa** (file, vài dòng) | | | |
 | **Khái niệm trên slide** | | | |
 
 ## 2. Các con số
 
-- P99 lateness đo từ Bronze: `____` ngày → `LOOKBACK_DAYS = ____`
+- P99 lateness đo từ Bronze: `3.00` ngày (P50=0.00, P95=2.90) → `LOOKBACK_DAYS = 3`
 - `submission/checksums.txt`: PASS / FAIL — Gold checksum: `________________`
 - `make parity`: PARITY / MISMATCH
 
